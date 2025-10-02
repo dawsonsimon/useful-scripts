@@ -13,9 +13,9 @@ awsref() {
     { if (!insec) print }
     END {
       print "[" prof "]"
-      print "aws_access_key_id = " ak
-      print "aws_secret_access_key = " sk
-      print "aws_session_token = " st
+      print "AWS_ACCESS_KEY_ID=" ak
+      print "AWS_SECRET_ACCESS_KEY=" sk
+      print "AWS_SESSION_TOKEN=" st
     }
   ' ~/.aws/credentials > ~/.aws/credentials.new && mv ~/.aws/credentials.new ~/.aws/credentials
 }
